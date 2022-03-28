@@ -22,7 +22,7 @@ namespace CleanArchMvc.Domain.Tests
             Action action = () => new Category(-1, "Category name");
             action.Should()
                 .Throw<DomainExceptionValidation>().WithMessage("Invalid Id value");
-        }
+        } 
 
         [Fact]
         public void CreateCategory_ShortNameValue_DomainExceptionShortName()
